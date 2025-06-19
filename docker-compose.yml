@@ -1,6 +1,5 @@
 # runs all dockers
 
-version: '3.8'
 services:
   
   prometheus:
@@ -9,13 +8,13 @@ services:
     ports:
       - "${PROMETHEUS_PORT}:9090"
     volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
     networks:
     - system-monitoring
     restart: unless-stopped
 
   node_exporter:
-    image: prom/node-exporter
+    image: prom/node-exporter:v1.9.1
     container_name: node_exporter
     ports:
       - "${NODE_EXPORTER_PORT}:9100"
@@ -24,7 +23,7 @@ services:
     restart: unless-stopped
 
   grafana:
-    image: grafana/grafana:10.2.2
+    image: grafana/grafana:12.0.2
     container_name: grafana
     ports: 
     - "${GRAFANA_PORT}:3000"

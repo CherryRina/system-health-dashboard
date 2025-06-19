@@ -28,6 +28,8 @@ docker-compose up -d
 1. `http://localhost:9090` : Prometheus Interface
 2. `http://localhost:3000` : Grafana Interface
 Login with user admin and the password you set in .env
+#### Connect Grafana to Prometheus
+In Grafana "connections" find "Data Source" and add Prometheus using its URL with conatiners name instead of localhost `http://prometheus-server:9090`
 ##### Import the Grafana dashboard
 - Go to dashboards and click on "create dashboard" and then on "import a dashboard"
 - Enter Dashboard ID 1860, then click Load (1860 is a public dashboard available at Grafanas site)

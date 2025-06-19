@@ -1,0 +1,3 @@
+docker==28.0.1
+docker compose==2.33.1
+
