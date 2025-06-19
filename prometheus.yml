@@ -1,7 +1,7 @@
 # prometheus configuration - tells prometheus to scrape data from Node Exporter every 15 seconds
 
 global:
-  scrape_interval: "15s"
+  scrape_interval: "15s" # change scrape interval if nedded
 
 scrape_configs: 
     # scrapes prometheus servers data
@@ -13,8 +13,3 @@ scrape_configs:
   - job_name: 'node_exporter'
     static_configs:
       - targets: ['node_exporter:9100']
-
-  # scrapes containers data
-  - job_name: 'cadvisor'
-    static_configs:
-      - targets: ['cadvisor:8080']
