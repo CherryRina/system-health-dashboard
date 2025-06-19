@@ -30,7 +30,7 @@ docker-compose up -d
 Login with user admin and the password you set in .env
 ##### Import the Grafana dashboard
 - Go to dashboards and click on "create dashboard" and then on "import a dashboard"
-- Enter Dashboard ID 1860, then click Load(1860 is a public dashboard available online)
+- Enter Dashboard ID 1860, then click Load (1860 is a public dashboard available at Grafanas site)
 - Set the data source to your Prometheus instance and click Import
 
 #### You now have a live Grafana System Hardware Dashboard!

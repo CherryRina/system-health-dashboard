@@ -1,0 +1,5 @@
+# ignore grafana-storage directory
+grafana-storage/
+
+# ignore .env
+.env
